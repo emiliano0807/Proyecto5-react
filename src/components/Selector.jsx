@@ -1,6 +1,10 @@
 import React from 'react'
+import { useContext } from 'react'
+import { AppContext } from '../context/AppContext';
 
-const Selector = ({users, setCurrentUserId}) => {
+const Selector = () => {
+
+  const {users,setCurrentUserId} = useContext(AppContext);
   return (
     <ul className='flex flex-wrap justify-evenly gap-4 mt-4 bg-white shadow-lg rounded p-2'>
       {users.map(

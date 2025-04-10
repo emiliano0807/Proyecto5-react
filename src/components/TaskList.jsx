@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { use } from 'react'
 import TaskItem from './TaskItem'
+import { useContext } from 'react'
+import { AppContext } from '../context/AppContext';
 
-const TaskList = ({tasks}) => {
+const TaskList = () => {
+  const {tasks} = useContext(AppContext);
+
   return (
     <main className='bg-white shadow rounded mt-3'>
       <h2 className='text-center font-bold text-2xl text-stone-800'>Tareas</h2>
